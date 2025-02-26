@@ -18,6 +18,7 @@
     header svg {
         width: calc(100vw - 2rem);
         mix-blend-mode: difference;
+        max-height: 100svh;
     }
     /* header h1 {
         color: var(--clr-background);
@@ -46,7 +47,10 @@
     }
     @media (width < 80ch) {
         .content {
-            grid-template-columns: 1fr;
+            display: block;
+        }
+        main {
+            margin-top: 1rem;
         }
     }
     aside h2 {
