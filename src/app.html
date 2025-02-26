@@ -4,6 +4,91 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<style>			
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				font: inherit;
+				text-decoration: inherit;
+			}
+
+			:root {
+				--clr-background: hsl(0, 0%, 100%);
+				--clr-foreground: hsl(0, 0%, 0%);
+			}
+
+			html {
+				overflow-x: hidden;
+			}
+
+			body {
+				font-family: "Geist", sans-serif;
+				font-optical-sizing: auto;
+				font-weight: normal;
+				font-style: normal;
+				line-height: 1;
+				-webkit-font-smoothing: antialiased;
+				background-color: var(--clr-background);
+				color: var(--clr-foreground);
+			}
+
+			img, picture, video, canvas, svg {
+				display: block;
+				max-width: 100%;
+			}
+
+			svg {
+				height: auto;
+				width: 100%;
+			}
+
+			input, button, textarea, select {
+				font: inherit;
+			}
+
+			p, h1, h2, h3, h4, h5, h6 {
+				overflow-wrap: break-word;
+			}
+
+			/* sr_only */
+
+			.visually-hidden:not(:focus):not(:active) {
+				clip: rect(0 0 0 0); 
+				clip-path: inset(50%);
+				height: 1px;
+				overflow: hidden;
+				position: absolute;
+				white-space: nowrap; 
+				width: 1px;
+			}
+
+			h1, h2, h3 {
+				font-weight: bold;
+				letter-spacing: -0.05ch;
+				text-transform: uppercase;
+			}
+
+			h1 {
+				font-size: 4rem;
+			}
+
+			h2 {
+				font-size: 2.5rem;
+			}
+
+			h3 {
+				font-size: 1.5rem;
+			}
+		</style>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
