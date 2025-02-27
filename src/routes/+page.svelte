@@ -35,6 +35,7 @@
         grid-column: 1 / -1;
         grid-row: 1 / -1;
         image-rendering: pixelated;
+        object-fit: cover;
     }
     .content {
         display: flex;
@@ -103,6 +104,19 @@
     section + section {
         margin-top: 2rem;
     }
+    footer {
+        display: grid;
+        place-content: center;
+        margin-top: 5rem;
+        padding: 1rem;
+    }
+    footer a {
+        color: hsl(0, 0%, 50%);
+        text-decoration: underline;
+    }
+    footer a:hover {
+        text-decoration-style: dotted;
+    }
 </style>
 
 <header>
@@ -130,8 +144,8 @@
                 <ul role="list">
                     <li><a href="/#introduction">Introduction</a></li>
                     <li><a href="/#background">Background</a></li>
-                    <li><a href="/#methods">Methods</a></li>
                     <li><a href="/#product">Product</a></li>
+                    <li><a href="/#methods">Methods</a></li>
                     <li><a href="/#investigation-results">Investigation and Results</a></li>
                     <li><a href="/#limitations">Limitations</a></li>
                 </ul>
@@ -149,13 +163,13 @@
             <p>Read our annotated bibliography of background research <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/research//background-annotated-bibliography.pdf">here</a>.</p>
         </section>
         <section>
-            <h2 id="methods">Methods</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure asperiores commodi vel provident ipsum odit laudantium doloremque corporis voluptate. Possimus sint voluptate minus illum numquam velit voluptas voluptatibus exercitationem voluptates natus itaque minima, impedit perspiciatis accusantium sed nobis eveniet. Sed, corporis? Adipisci cumque officia quae reiciendis dolore nulla, pariatur soluta veritatis provident earum minus in accusamus quaerat sit excepturi? Iste laborum earum quae, et perspiciatis incidunt sint unde optio neque.</p>
-            <p>Read our annotated bibliography of research methods and methodologies <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/research//methods-annotated-bibliography.pdf">here</a>.</p>
-        </section>
-        <section>
             <h2 id="product">Product</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure asperiores commodi vel provident ipsum odit laudantium doloremque corporis voluptate. Possimus sint voluptate minus illum numquam velit voluptas voluptatibus exercitationem voluptates natus itaque minima, impedit perspiciatis accusantium sed nobis eveniet. Sed, corporis? Adipisci cumque officia quae reiciendis dolore nulla, pariatur soluta veritatis provident earum minus in accusamus quaerat sit excepturi? Iste laborum earum quae, et perspiciatis incidunt sint unde optio neque.</p>
+        </section>
+        <section>
+            <h2 id="methods">Research Methods</h2>
+            <p class="text-3xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure asperiores commodi vel provident ipsum odit laudantium doloremque corporis voluptate. Possimus sint voluptate minus illum numquam velit voluptas voluptatibus exercitationem voluptates natus itaque minima, impedit perspiciatis accusantium sed nobis eveniet. Sed, corporis? Adipisci cumque officia quae reiciendis dolore nulla, pariatur soluta veritatis provident earum minus in accusamus quaerat sit excepturi? Iste laborum earum quae, et perspiciatis incidunt sint unde optio neque.</p>
+            <p>Read our annotated bibliography of research methods and methodologies <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/research//methods-annotated-bibliography.pdf">here</a>.</p>
         </section>
         <section>
             <h2 id="investigation-results">Investigation and Results</h2>
@@ -171,3 +185,6 @@
     </main>
     <div class="space"></div>
 </div>
+<footer>
+    <p><a href="/survey/">Complete our listening test to contribute data to our research.</a></p>
+</footer>
