@@ -95,6 +95,7 @@ footer {
     }
 }
 .image-carousel {
+    max-height: 80vh;
     margin-top: 1rem;
     list-style: none;
     display: flex;
@@ -106,6 +107,7 @@ footer {
 }
 .image-carousel img {
     height: 100%;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: left;
 }
