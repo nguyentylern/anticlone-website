@@ -78,14 +78,10 @@
         <section>
             <h2 id="introduction">Introduction</h2>
             <p>Anticlone is a research project by Hannah Lu and Tyler Nguyen, students at FCS Innovation Academy in Alpharetta, Georgia. (You can read more about us below.) We were driven to create this research project by the rise of modern machine learning technologies that can clone human voices, converting a person's voice into another or generating speech. We believed that the implications can be dangerous, and there have been examples where such technology has negatively impacted people: artifical speech was used to frame a school principal of racist speech <a href="https://apnews.com/article/ai-maryland-principal-voice-recording-663d5bc0714a3af221392cc6f1af985e">[1]</a>, and artifical speech of Joe Biden was used to discourage Democrats from voting <a href="https://www.npr.org/2024/05/23/nx-s1-4977582/fcc-ai-deepfake-robocall-biden-new-hampshire-political-operative">[2]</a>.</p>
-            <ul role="list" class="image-carousel">
-                <li>
-                    <img src="https://dims.apnews.com/dims4/default/7d044b9/2147483647/strip/true/crop/6048x4024+0+0/resize/1440x958!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F2e%2Fa2%2Fdee54a6efdb10c8590c36d513aa0%2Ff23d0ce3c6174aa9b35facf21ef763d4" alt="Baltimore County Police Chief Robert McCullough and other local officials speak at a news conference in Towson, Md., April 25, 2024. The most recent criminal case to involve artificial intelligence has emerged from a high school in Baltimore County, Maryland. That's where police say a principal was framed by a fake recording of his voice. (Kim Hairston/The Baltimore Sun via AP). Caption sourced from reference 1.">
-                </li>
-                <li>
-                    <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5333x4000+333+0/resize/1600/quality/85/format/webp/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F2d%2F60%2Fb9ef575c4554a041cf8972f7f48b%2Fgettyimages-1955393469.jpg" alt="Voters filling out their ballots on Jan. 23 in Loudon, N.H. A political consultant faces charges in New Hampshire and steep fines from the Federal Communications Commission for creating a robocall ahead of that state's presidential primary featuring a cloned version of President Biden's voice, urging people not to vote in the primary. Caption sourced from reference 2.">
-                </li>
-            </ul>
+            <div class="image-carousel">
+                <img src="https://dims.apnews.com/dims4/default/7d044b9/2147483647/strip/true/crop/6048x4024+0+0/resize/1440x958!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F2e%2Fa2%2Fdee54a6efdb10c8590c36d513aa0%2Ff23d0ce3c6174aa9b35facf21ef763d4" alt="Baltimore County Police Chief Robert McCullough and other local officials speak at a news conference in Towson, Md., April 25, 2024. The most recent criminal case to involve artificial intelligence has emerged from a high school in Baltimore County, Maryland. That's where police say a principal was framed by a fake recording of his voice. (Kim Hairston/The Baltimore Sun via AP). Caption sourced from reference 1.">
+                <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5333x4000+333+0/resize/1600/quality/85/format/webp/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F2d%2F60%2Fb9ef575c4554a041cf8972f7f48b%2Fgettyimages-1955393469.jpg" alt="Voters filling out their ballots on Jan. 23 in Loudon, N.H. A political consultant faces charges in New Hampshire and steep fines from the Federal Communications Commission for creating a robocall ahead of that state's presidential primary featuring a cloned version of President Biden's voice, urging people not to vote in the primary. Caption sourced from reference 2.">
+            </div>
             <p>Thus, we wanted to research a way that could degrade the quality of the outputs of speech generative machine learning algorithms. In particular, we wanted to do this by altering the reference audio of a speaker used to clone a voice, and this idea was inspired by the <a href="https://glaze.cs.uchicago.edu/">Glaze</a> and <a href="https://nightshade.cs.uchicago.edu/">Nightshade</a> projects that do something similar but with image generators. Based on these ideas, we created the following research question.</p>
             <p class="research-question"><span>Research Question</span> <span>How can audio data be altered to disrupt the quality of outputs from audio generative machine learning models?</span></p>
             <p>We also constructed some goals that we wanted to reach with our solution: the change to the reference audio should be virtually imperceptible, the output from a speech-generating model using our processed audio should be noticably worse in quality compared to an output produced using non-processed audio. These goals are also inspired by Glaze and Nightshade's functionality.</p>
@@ -107,28 +103,20 @@
             <h2 id="background">Background</h2>
             <p>We began our background research with how speech-generating machine learning models worked. We investigated the research behind several models as well as the methods for creating such models. We found that the models are usually trained on audio data not in the form of raw, uncompressed audio file, but in the form of spectrograms, graphs that plot the amplitude of frequency ranges over time. One source also discussed audio watermarking, the act of altering the frequency information of some audio in a specific pattern, that could be not-hearable by humans but would affect the training of machine learning models. This expanded the possibilities of what we could implement for our product.</p>
             <p>Overall, we found that subtle alterations made to the frequency domain of audio would be most feasible given our technical knowledge and what we had learned from the sources we collected. It is possible that time-based alterations could be performed without altering speaker-recognition and speaker-similarity, but such an implementation would be complex beyond our technical capabilities. In addition, most sources, through their discussion of spectrograms, highlighted the importance of frequency information to generating speech and cloning voices (this makes sense considering our existing knowledge of timbre).</p>
-            <ul role="list" class="image-carousel">
-                <li>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png" alt="A spectrogram, showing time on the x-axis, frequency on the y-axis, and color representing the amplitude of a frequency region within a time region.">
-                </li>
-                <li>
-                    <img src={spectrogram_1} alt="A screenshot of Figure 2 from the source by Malik and Changalvala, referenced in the first document blow. It shows two spectrograms, one of real speech and one of synthesized speech. It highlights discrepancies seen in the spectrogram of the synthesized speech." style="border: 1px solid var(--clr-foreground);">
-                </li>
-            </ul>
+            <div class="image-carousel">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png" alt="A spectrogram, showing time on the x-axis, frequency on the y-axis, and color representing the amplitude of a frequency region within a time region.">
+                <img src={spectrogram_1} alt="A screenshot of Figure 2 from the source by Malik and Changalvala, referenced in the first document blow. It shows two spectrograms, one of real speech and one of synthesized speech. It highlights discrepancies seen in the spectrogram of the synthesized speech." style="border: 1px solid var(--clr-foreground);">
+            </div>
             <p>Read through our initial research of twenty sources pertaining to machine learning with a focus on speech-generation <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/research//15-sources-background-research.pdf">here</a>.</p>
             <p>Read our annotated bibliography of background research <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/research//background-annotated-bibliography.pdf">here</a>.</p>
         </section>
         <section>
             <h2 id="product">Product</h2>
             <p>Our product is a console application developed in the C++ programming language using the JUCE audio processing framework. The program takes in an input <code>.wav</code> file and performs transformations on the audio data and outputs a new <code>.wav</code> file. The program first loads the input file into a buffer. Then, the fast fourier transform is applied to the signal, allowing the spectral component of the audio to be modified. The program then selects frequency bins above 2400 hertz and randomly alters each bin's frequency in conjuction with an adjacent bin. This creates subtle changes in the upper frequencies of a voice. After the frequency bins are processed, the program performs the inverse fast fourier transform and loads that audio into the output buffer. The output buffer is then normalized and written to a file on the disk.</p>
-            <ul role="list" class="image-carousel">
-                <li>
-                    <img src={xcode} alt="A screenshot of the Xcode environment where the program was developed.">
-                </li>
-                <li>
-                    <img src={ableton} alt="A screenshot of an Ableton Live project where a piece of original audio and a piece of altered audio are being compared.">
-                </li>
-            </ul>
+            <div class="image-carousel">
+                <img src={xcode} alt="A screenshot of the Xcode environment where the program was developed.">
+                <img src={ableton} alt="A screenshot of an Ableton Live project where a piece of original audio and a piece of altered audio are being compared.">
+            </div>
         </section>
         <section>
             <h2 id="methods">Research Methods</h2>

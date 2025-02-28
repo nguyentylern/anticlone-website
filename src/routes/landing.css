@@ -95,21 +95,20 @@ footer {
     }
 }
 .image-carousel {
-    max-height: 80vh;
     margin-top: 1rem;
     list-style: none;
     display: flex;
     gap: 1rem;
     overflow-x: auto;
 }
-.image-carousel li {
-    min-width: 80%;
-}
 .image-carousel img {
-    height: 100%;
-    aspect-ratio: 16 / 9;
+    max-height: 80vh;
+    max-width: 80%;
     object-fit: cover;
     object-position: left;
+}
+@media (width < 60ch) {
+
 }
 .normal-list {
     padding-left: 2ch;
