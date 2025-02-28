@@ -2,6 +2,7 @@
     import hero from '$lib/assets/hero-2.webp';
     import xcode from '$lib/assets/xcode.png';
     import ableton from '$lib/assets/ableton.png';
+    import spectrogram_1 from '$lib/assets/spectrogram-1.png';
     import './landing.css';
 </script>
 
@@ -100,7 +101,17 @@
         </section>
         <section>
             <h2 id="background">Background</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure asperiores commodi vel provident ipsum odit laudantium doloremque corporis voluptate. Possimus sint voluptate minus illum numquam velit voluptas voluptatibus exercitationem voluptates natus itaque minima, impedit perspiciatis accusantium sed nobis eveniet. Sed, corporis? Adipisci cumque officia quae reiciendis dolore nulla, pariatur soluta veritatis provident earum minus in accusamus quaerat sit excepturi? Iste laborum earum quae, et perspiciatis incidunt sint unde optio neque.</p>
+            <p>We began our background research with how speech-generating machine learning models worked. We investigated the research behind several models as well as the methods for creating such models. We found that the models are usually trained on audio data not in the form of raw, uncompressed audio file, but in the form of spectrograms, graphs that plot the amplitude of frequency ranges over time. One source also discussed audio watermarking, the act of altering the frequency information of some audio in a specific pattern, that could be not-hearable by humans but would affect the training of machine learning models. This expanded the possibilities of what we could implement for our product.</p>
+            <p>Overall, we found that subtle alterations made to the frequency domain of audio would be most feasible given our technical knowledge and what we had learned from the sources we collected. It is possible that time-based alterations could be performed without altering speaker-recognition and speaker-similarity, but such an implementation would be complex beyond our technical capabilities. In addition, most sources, through their discussion of spectrograms, highlighted the importance of frequency information to generating speech and cloning voices (this makes sense considering our existing knowledge of timbre).</p>
+            <ul role="list" class="image-carousel">
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png" alt="A spectrogram, showing time on the x-axis, frequency on the y-axis, and color representing the amplitude of a frequency region within a time region.">
+                </li>
+                <li>
+                    <img src={spectrogram_1} alt="A screenshot of Figure 2 from the source by Malik and Changalvala, referenced in the first document blow. It shows two spectrograms, one of real speech and one of synthesized speech. It highlights discrepancies seen in the spectrogram of the synthesized speech." style="border: 1px solid var(--clr-foreground);">
+                </li>
+            </ul>
+            <p>Read through our initial research of twenty sources pertaining to machine learning with a focus on speech-generation <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/research//15-sources-background-research.pdf">here</a>.</p>
             <p>Read our annotated bibliography of background research <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/research//background-annotated-bibliography.pdf">here</a>.</p>
         </section>
         <section>

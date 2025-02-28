@@ -107,6 +107,7 @@ footer {
 .image-carousel img {
     height: 100%;
     object-fit: cover;
+    object-position: left;
 }
 .normal-list {
     padding-left: 2ch;
