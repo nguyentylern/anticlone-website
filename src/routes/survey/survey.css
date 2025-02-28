@@ -1,0 +1,92 @@
+.wrapper {
+    width: min(100vw - 2rem, 70ch);
+    margin-inline: auto;
+    margin-block: 1rem;
+}
+
+.survey p {
+    line-height: 1.25;
+}
+
+.survey a {
+    color: var(--clr-foreground);
+    text-decoration: underline;
+}
+
+.survey a:hover {
+    text-decoration-style: dotted;
+}
+
+.survey header > * + * {
+    margin-top: 1rem;
+}
+
+.survey main {
+    margin-top: 1rem;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+form > p:first-child {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--clr-foreground);
+}
+
+.input-group {
+    padding-block: 1rem;
+}
+
+.input-group > * {
+    display: block;
+}
+
+.input-group:not(:last-child) {
+    border-bottom: 1px solid var(--clr-foreground);
+}
+
+.input-group label:not(:has(input)) {
+    font-weight: bold;
+}
+
+.input-group > * + * {
+    margin-top: 0.5rem;
+}
+
+.input-group:has(.audio-pair) > p:first-child {
+    font-weight: bold;
+}
+
+.audio-pair {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+@media (width < 60ch) {
+    .audio-pair {
+        display: block;
+    }
+    .audio-pair > * + * {
+        margin-top: 0.5rem;
+    }
+}
+
+.audio-wrapper {
+    border: 1px solid var(--clr-foreground);
+    padding: 0.5rem;
+    /* border-radius: 0.5rem; */
+}
+
+.audio-wrapper p {
+    font-weight: bold;
+}
+
+.audio-wrapper > * + * {
+    margin-top: 0.5rem;
+}
+
+.audio-wrapper audio {
+    width: 100%;
+}

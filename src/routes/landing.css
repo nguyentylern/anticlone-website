@@ -1,0 +1,126 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem;
+    width: calc(100vw - 2rem);
+}
+.content p {
+    line-height: 1.25;
+}
+aside .nav {
+    position: sticky;
+    top: 1rem;
+}
+aside nav {
+    --border: 1px solid var(--clr-foreground);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    padding-block: 1rem;
+    padding-right: 1rem;
+}
+@media (width < 80ch) {
+    .content {
+        display: block;
+    }
+    main {
+        margin-top: 1rem;
+    }
+}
+aside h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+aside ul {
+    list-style: none;
+}
+aside li + li {
+    margin-top: 0.5rem;
+}
+aside a {
+    color: var(--clr-foreground);
+}
+aside a:hover {
+    text-decoration: underline;
+}
+main p {
+    text-align: justify;
+    line-height: 2;
+}
+main h2, main h3 {
+    text-wrap: balance;
+}
+main h3 {
+    margin-top: 1rem;
+}
+main a {
+    color: var(--clr-foreground);
+    text-decoration: underline;
+}
+main a:hover {
+    text-decoration-style: dotted;
+}
+section * + p {
+    margin-top: 1rem;
+}
+section + section {
+    margin-top: 2rem;
+}
+footer {
+    display: grid;
+    place-content: center;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+.research-question :first-child {
+    font-weight: bold;
+}
+.our-background {
+    margin-top: 1rem;
+}
+.our-background > :nth-child(2) {
+    margin-top: 1rem;
+}
+@media (width > 70ch) {
+    .our-background {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .our-background > :nth-child(2) {
+        margin-top: 0;
+    }
+    .our-background > :last-child {
+        grid-column: span 2;
+    }
+}
+.image-carousel {
+    margin-top: 1rem;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+}
+.image-carousel li {
+    min-width: 80%;
+}
+.image-carousel img {
+    height: 100%;
+    object-fit: cover;
+}
+.normal-list {
+    padding-left: 2ch;
+    line-height: 1.25;
+}
+* + .normal-list {
+    margin-top: 1rem;
+}
+.normal-list li + li {
+    margin-top: 0.5rem;
+}
+section code {
+    font-family: monospace;
+    background-color: var(--clr-muted);
+    padding: 2px 3px;
+    border-radius: 2px;
+}
