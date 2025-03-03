@@ -60,7 +60,7 @@
 </header>
 <div class="content">
     <aside>
-        <div class="nav">
+        <div class="my-nav">
             <h2>Directory</h2>
             <nav>
                 <ul role="list">

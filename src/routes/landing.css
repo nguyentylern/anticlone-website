@@ -8,7 +8,10 @@
 .content p {
     line-height: 1.25;
 }
-aside .nav {
+p {
+    margin-bottom: 0;
+}
+aside .my-nav {
     position: sticky;
     top: 1rem;
 }
@@ -33,12 +36,15 @@ aside h2 {
 }
 aside ul {
     list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
 }
 aside li + li {
     margin-top: 0.5rem;
 }
 aside a {
     color: var(--clr-foreground);
+    text-decoration: none;
 }
 aside a:hover {
     text-decoration: underline;
@@ -50,7 +56,7 @@ main p {
 main h2, main h3 {
     text-wrap: balance;
 }
-main h3 {
+main * + h3 {
     margin-top: 1rem;
 }
 main a {
@@ -120,9 +126,10 @@ footer {
 .normal-list li + li {
     margin-top: 0.5rem;
 }
-section code {
+section code, .file-format {
     font-family: monospace;
     background-color: var(--clr-muted);
+    color: var(--clr-foreground);
     padding: 2px 3px;
     border-radius: 2px;
 }
