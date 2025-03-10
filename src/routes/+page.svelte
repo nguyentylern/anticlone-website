@@ -107,8 +107,8 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png" alt="A spectrogram, showing time on the x-axis, frequency on the y-axis, and color representing the amplitude of a frequency region within a time region.">
                 <img src={spectrogram_1} alt="A screenshot of Figure 2 from the source by Malik and Changalvala, referenced in the first document blow. It shows two spectrograms, one of real speech and one of synthesized speech. It highlights discrepancies seen in the spectrogram of the synthesized speech." style="border: 1px solid var(--clr-foreground);">
             </div>
-            <p>Read through our initial research of twenty sources pertaining to machine learning with a focus on speech-generation <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/research//15-sources-background-research.pdf">here</a>.</p>
-            <p>Read our annotated bibliography of background research <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/research//background-annotated-bibliography.pdf">here</a>.</p>
+            <p>Read through our initial research of twenty sources pertaining to machine learning with a focus on speech-generation <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/assets/15-sources-background-research.pdf">here</a>.</p>
+            <p>Read our annotated bibliography of background research <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/assets/background-annotated-bibliography.pdf">here</a>.</p>
         </section>
         <section>
             <h2 id="product">Product</h2>
@@ -128,9 +128,9 @@
                 <li>original audio output (OAO: audio synthesized by a voice cloning model with OA as the reference audio),</li>
                 <li>and altered audio outupt (AAO: audio synthesized by a voice cloning model with AA as the reference audio).</li>
             </ul>
-            <p>With these types of audios, the following comparisons will be made by each participant (they will not know which audio is what type): (A) OA versus AA, (B) OA versus OAO, (C) AA versus AAO, and (D) OAO versus AAO. These comparisons will be made upon a scale from 1 to 5, 1 indicating that the voices are from completely different people, and 5 indicating that the voices are from the same person under the same conditions.</p>
+            <p>With these types of audios, the following types of comparisons will be made by each participant (they will not know which audio is what type): (A) OA versus AA, (B) OA versus OAO, (C) AA versus AAO, and (D) OAO versus AAO. These comparisons will be made upon a scale from 1 to 5, 1 indicating that the voices are from completely different people, and 5 indicating that the voices are from the same person under the same conditions.</p>
             <p>Once a participant has submitted their response, their consent form will be validated by us, and if it is invalid, their response will not be considered. Once the testing window has passed, the responses will be collected into tabular data to be analyzed. One part of the analysis will be creating a mean opinion score (MOS) for each comparison. A high score for comparison A will indicate that our first goal has been met. A significant difference between the MOSs for comparisons B and C will indicate a degradation in the quality of the output correlated with our processing, and a low MOS for comparison D will indicate the same.</p>
-            <p>Read our annotated bibliography of research methods and methodologies <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/research//methods-annotated-bibliography.pdf">here</a>.</p>
+            <p>Read our annotated bibliography of research methods and methodologies <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/assets/methods-annotated-bibliography.pdf">here</a>.</p>
         </section>
         <section>
             <h2 id="investigation-results">Investigation and Results</h2>

@@ -21,6 +21,10 @@
     margin-top: 1rem;
 }
 
+.survey p {
+    text-align: justify;
+}
+
 .survey main {
     margin-top: 1rem;
 }
