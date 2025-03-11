@@ -4,11 +4,17 @@
     import './survey.css';
 
     let age: number | null = $state(null);
-    let initials: string | null = $state(null);
 
-    let initials_expr = /^[a-zA-Z]{2}$/;
+    let audio_1_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-1.wav';
+    let audio_1_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-2/audio-1.wav';
+    let audio_2_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-1.wav';
+    let audio_2_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-3/audio-1-1.wav';
+    let audio_3_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-2/audio-1.wav';
+    let audio_3_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-4/audio-1-1.wav';
+    let audio_4_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-3/audio-1-1.wav';
+    let audio_4_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-4/audio-1-1.wav';
 
-    import audio_1 from '$lib/assets/0044-3.mp3';
+    let audio_text = 'A rating of 1 indicates that the voices come from entirely different people. A rating of 5 indicates that the voices are from the same person under the same exact conditions. Ignore mispronunciations and other speaking defects and focus on the speaker\'s identity.';
 
 	import type { PageProps } from './$types';
     let { data, form }: PageProps = $props();
@@ -56,7 +62,7 @@
                 {#if age != null && age < 18}
                     <div>
                         <label for="initials" class="form-label">Initials</label>
-                        <input type="text" class="form-control" name="initials" id="initials" bind:value={initials}>
+                        <input type="text" class="form-control" name="initials" id="initials">
                         <p class="form-text">By inputting your parent or guardian's initials in the field above, you assure that your parent or guardian approves of your participation in this survey</p>
                     </div>
                 {/if}
@@ -65,10 +71,10 @@
                 <h3>Audio Pair 1</h3>
                 <div class="audio-pair">
                     <div class="audio-wrapper">
-                        <Audio src={audio_1} title="Audio 1"></Audio>
+                        <Audio src={audio_1_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
-                        <Audio src={audio_1} title="Audio 2"></Audio>
+                        <Audio src={audio_1_2} title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_1" id="comp_1" class="form-select" required>
@@ -78,16 +84,16 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <p class="form-text">A rating of 1 indicates that the voices come from entirely different people. A rating of 5 indicates that the voices are from the same person under the same exact conditions.</p>
+                <p class="form-text">{audio_text}</p>
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 2</h3>
                 <div class="audio-pair">
                     <div class="audio-wrapper">
-                        <Audio src={audio_1} title="Audio 1"></Audio>
+                        <Audio src={audio_2_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
-                        <Audio src={audio_1} title="Audio 2"></Audio>
+                        <Audio src={audio_2_2} title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_2" id="comp_2" class="form-select" required>
@@ -97,16 +103,16 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <p class="form-text">A rating of 1 indicates that the voices come from entirely different people. A rating of 5 indicates that the voices are from the same person under the same exact conditions.</p>
+                <p class="form-text">{audio_text}</p>
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 3</h3>
                 <div class="audio-pair">
                     <div class="audio-wrapper">
-                        <Audio src={audio_1} title="Audio 1"></Audio>
+                        <Audio src={audio_3_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
-                        <Audio src={audio_1} title="Audio 2"></Audio>
+                        <Audio src={audio_3_2} title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_3" id="comp_3" class="form-select" required>
@@ -116,16 +122,16 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <p class="form-text">A rating of 1 indicates that the voices come from entirely different people. A rating of 5 indicates that the voices are from the same person under the same exact conditions.</p>
+                <p class="form-text">{audio_text}</p>
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 4</h3>
                 <div class="audio-pair">
                     <div class="audio-wrapper">
-                        <Audio src={audio_1} title="Audio 1"></Audio>
+                        <Audio src={audio_4_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
-                        <Audio src={audio_1} title="Audio 2"></Audio>
+                        <Audio src={audio_4_2} title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_4" id="comp_4" class="form-select" required>
@@ -135,7 +141,7 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <p class="form-text">A rating of 1 indicates that the voices come from entirely different people. A rating of 5 indicates that the voices are from the same person under the same exact conditions.</p>
+                <p class="form-text">{audio_text}</p>
             </div>
             <div class="submission-wrapper">
                 <h3>Submit</h3>
