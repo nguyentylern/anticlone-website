@@ -373,13 +373,13 @@
             <div class="submission-wrapper">
                 <h3>Submit</h3>
                 <p>Before submitting, make sure that you have filled out each input. Responses that are not appropriately filled out will be discarded and not used in our research.</p>
-                <button type="submit">Submit</button>
-                {#if form?.error}
+                <button type="submit" disabled>Submit</button>
+                <!-- {#if form?.error}
                     <p>Failed to upload response to database. Please make sure you have completed the form correctly before resubmitting.</p>
                 {/if}
                 {#if form?.success}
                     <p>Successfully completed form. Thank you for completing our survey.</p>
-                {/if}
+                {/if} -->
             </div>
         </form>
     </main>
