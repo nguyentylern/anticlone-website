@@ -3,6 +3,10 @@
     import xcode from '$lib/assets/xcode.png';
     import ableton from '$lib/assets/ableton.png';
     import spectrogram_1 from '$lib/assets/spectrogram-1.png';
+    import spectrogram_2 from '$lib/assets/spectrogram-2.png';
+    import graph from '$lib/assets/graph.png';
+    import juce from '$lib/assets/juce.png';
+    import ircam from '$lib/assets/ircam.png';
     import './landing.css';
 </script>
 
@@ -68,13 +72,14 @@
                     <li><a href="/#background">Background</a></li>
                     <li><a href="/#product">Product</a></li>
                     <li><a href="/#methods">Methods</a></li>
-                    <li><a href="/#investigation-results">Investigation and Results</a></li>
-                    <li><a href="/#limitations">Limitations</a></li>
+                    <li><a href="/#results-analysis">Results and Analysis</a></li>
+                    <li><a href="/#limitations">Limitations and Future Research</a></li>
+                    <li><a href="/#conclusions">Conclusions</a></li>
                 </ul>
             </nav>
         </div>
     </aside>
-    <main style="width: min(100%, 60ch);">
+    <main style="width: min(100%, 60ch); margin-bottom: 4rem;">
         <section>
             <h2 id="introduction">Introduction</h2>
             <p>Anticlone is a research project by Hannah Lu and Tyler Nguyen, students at FCS Innovation Academy in Alpharetta, Georgia. (You can read more about us below.) We were driven to create this research project by the rise of modern machine learning technologies that can clone human voices, converting a person's voice into another or generating speech. We believed that the implications can be dangerous, and there have been examples where such technology has negatively impacted people: artificial speech was used to frame a school principal of racist speech <a href="https://apnews.com/article/ai-maryland-principal-voice-recording-663d5bc0714a3af221392cc6f1af985e">[1]</a>, and artificial speech of Joe Biden was used to discourage Democrats from voting <a href="https://www.npr.org/2024/05/23/nx-s1-4977582/fcc-ai-deepfake-robocall-biden-new-hampshire-political-operative">[2]</a>.</p>
@@ -104,11 +109,36 @@
             <p>We began our background research with how speech-generating machine learning models worked. We investigated the research behind several models as well as the methods for creating such models. We found that the models are usually trained on audio data not in the form of raw, uncompressed audio file, but in the form of spectrograms, graphs that plot the amplitude of frequency ranges over time. One source also discussed audio watermarking, the act of altering the frequency information of some audio in a specific pattern, that could be not-hearable by humans but would affect the training of machine learning models. This expanded the possibilities of what we could implement for our product.</p>
             <p>Overall, we found that subtle alterations made to the frequency domain of audio would be most feasible given our technical knowledge and what we had learned from the sources we collected. It is possible that time-based alterations could be performed without altering speaker-recognition and speaker-similarity, but such an implementation would be complex beyond our technical capabilities. In addition, most sources, through their discussion of spectrograms, highlighted the importance of frequency information to generating speech and cloning voices (this makes sense considering our existing knowledge of timbre).</p>
             <div class="image-carousel">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Spectrogram-19thC.png" alt="A spectrogram, showing time on the x-axis, frequency on the y-axis, and color representing the amplitude of a frequency region within a time region.">
-                <img src={spectrogram_1} alt="A screenshot of Figure 2 from the source by Malik and Changalvala, referenced in the first document blow. It shows two spectrograms, one of real speech and one of synthesized speech. It highlights discrepancies seen in the spectrogram of the synthesized speech." style="border: 1px solid var(--clr-foreground);">
+                <img src={spectrogram_1} alt="A spectrogram, showing time on the x-axis, frequency on the y-axis, and color representing the amplitude of a frequency region within a time region." style="object-position: left;">
+                <img src={spectrogram_2} alt="A screenshot of Figure 2 from the source by Malik and Changalvala, referenced in the first document blow. It shows two spectrograms, one of real speech and one of synthesized speech. It highlights discrepancies seen in the spectrogram of the synthesized speech." style="border: 1px solid var(--clr-foreground);">
             </div>
+            <h3>Research Process</h3>
+            <p>This section combines information regarding both previous and forthcoming sections. To develop a full understanding, revisit this section after reading through the others.</p>
+            <p>The process of researching was largely based on some assumptions we made about the Glaze and Nightshade projects and how they work given our technical knowledge. We assumed that there was some modification of images through simple transformations, but reflecting on it now, their approach is likely far more advanced and more deeply rooted in the field of machine learning research than what we are capable of ascertaining because of our informal education on the subject.</p>
+            <p>Thus, we gathered rudimentary research on what is input to train speech-generating models and hypothesized that frequency alterations would be worth investigating. This limitation is discussed a bit more later.</p>
             <p>Read through our initial research of twenty sources pertaining to machine learning with a focus on speech-generation <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/assets/15-sources-background-research.pdf">here</a>.</p>
             <p>Read our annotated bibliography of background research <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/assets/background-annotated-bibliography.pdf">here</a>.</p>
+            <p>From this research, we made a concept map of some things we would need to understand to tackle our research project, but the topics we identified have a level of depth outside the possibilities of this research program. The concept map can be viewed <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/assets/concept-map.pdf">here</a>.</p>
+            <p>The rest of our process primarily consisted of developing the program and testing that the program produced an output that sounded similar to its input; we were limited by the time and were unable to test each iteration of the program through a voice-cloning model. Though the programming toolkit we used is most often used to create real-time audio effects, we were able to implement it as a console application. Progress of our development was not completely documented, but some steps have been reproduced below.</p>
+            <div class="image-carousel">
+                <img src={juce} alt="A screenshot of the Projucer application used to generate template JUCE projects. The screenshot specifically shows the window pane showing the options for creating a console application with the framework.">
+                <img src={ircam} alt="A screenshot of IRCAM's webpage on the parameters of the FFT algorithm.">
+            </div>
+            <p>The first image is of the Projucer software provided by the JUCE software toolkit used to build our program; it allows us to create programs on top of template projects. The second image is of <a href="https://support.ircam.fr/docs/AudioSculpt/3.0/co/Window%20Size.html">IRCAM's introduction to FFT processing focusing on parameters to the transormation</a> (FFT briefly explained below).</p>
+            <p>We did consult with Bryce Irvin, a machine learning researcher at Bose, about our methods, and though he suggested that other methods like audio fingerprinting could be feasible, we did not believe that our technical abilities and time constraints would allow for that. Our interview with him can be found below (we also talked about his experience at Georgia Tech).</p>
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/kcHHmdGzgKQ?si=tDkf4rQh2Fa81xzP"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                style="width: 100%;"
+                >
+            </iframe>
+            <p>As for collecting our results, we felt that creating our own survey would provide the best experience for participants, so we developed a website for the survey that collects all necessary information. It can be found <a href="/survey/">here</a>, though all audio files have been disabled to not use extraneous bandwidth. One problem we did run into is that the content delivery network that we used (Supabase) had a free tier that could not accomodate the amount of bandwidth required for delivering all of the audio files to our earlier participants. Thus, we temporarily upgraded our plan so that the tests could be carried our appropriately.</p>
         </section>
         <section>
             <h2 id="product">Product</h2>
@@ -133,15 +163,20 @@
             <p>Read our annotated bibliography of research methods and methodologies <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/assets/methods-annotated-bibliography.pdf">here</a>.</p>
         </section>
         <section>
-            <h2 id="investigation-results">Investigation and Results</h2>
-            <h3>Investigation</h3>
-            <p>To be completed. Complete our listening test survey <a href="/survey">here</a> to contribute to our research.</p>
-            <h3>Results</h3>
-            <p>Results not yet obtained nor analyzed.</p>
+            <h2 id="results-analysis">Results and Analysis</h2>
+            <p>In total we collected 30 responses. From those responses, which will not be disclosed for the privacy of the respondents, we calculated the mean age and the mean opinion score (MOS) for each comparison. The mean age was 16.567. The MOSs for each comparison for each comparison can be found in Table 1 and Figure 1, including the standard deviation for each. Our criteria for success is primarily a significant difference between the scores of comparison types 2 and 3 (and the mean for 3 being greater than 2), but we also aim for a high score for comparison type 1 and a low score for comparison type 4.</p>
+            <img src={graph}>
+            <p>To determine significant difference, we performed two-tailed, paired t-tests with an &alpha;-value of 0.05 (95% confidence interval) for comparison on the data from comparison types 2 and 3 for both Hannah and Tyler. We found that there was not a significant difference for Hannah, but there was a significant difference for Tyler. However, the mean for comparison type 3 was greater than type 2 for Tyler, indicating that participants believed that the similarity between the altered audio and its output was greater than the original audio and its output, and this does not meet our criteria for success since it suggests that our program improved the quality of the voice cloning model. Though, this was only for vocal samples from Tyler, and the lack of a significant difference with Hannah-based samples weakens the believed effect of our program. As for the other comparison types, the means for comparison type 4 were lower than for comparison type 1, but the means were both above 3, indicating some level of similarity, which we were not aiming for.</p>
+            <p>You can find a spreadsheet of our results and statistal analysis <a href="https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/assets/responses-clean.csv" download>here</a> in an Excel CSV format. Individual responses are not included for the privacy of our participants.</p>
         </section>
         <section>
-            <h2 id="limitations">Limitations</h2>
-            <p>To be completed.</p>
+            <h2 id="limitations">Limitations and Future Research</h2>
+            <p>Some limitations we faced were a lack of willing participants. We believe this contributed to highly variant responses and a low number of responses overall. Due to this disinterest, our results could be misrepresentative of our participants' true reactions to the stimuli. Another limitation was our knowledge and proficiency in developing the program, as the JUCE framework is for the C++ programming language, a language that neither of us had significant experience with. Compounding on this was the limitation of time: much of the first semester was focused on background research (most of which was only tangentially relevant), resulting in less time to develop our program. Thus, some features that could have improved our results had to be left behind. Furthermore, a more objective analysis of the audio could have been performed if we were able to implement an audio watermarking feature (as suggested by our mentor Bryce Irvin), as we could have analyzed if that watermark were to be copied by the output of the voice cloning model.</p>
+            <p>Another limitation we faced was our lack of in-depth knowledge in the machine learning field. We've learned recently of a technique known as adversarial noise that can be used to combat the perceptive abilities of machine learning models, causing smart assistants to perceive music as recognizable commands. This has been shown to be effective within musical applications by musician Benn Jordan <a href="https://youtube.com/watch?v=xMYm2d9bmEA">[3]</a>; time-based applications on voices have been implemented by Li et al. (2023); and a general prevention model was developed by Huang et al. <a href="https://doi.org/10.24963/ijcai.2023/535">[4]</a>. Future research based on combining these approaches and perhaps ours could further knowledge in attacking the performance of voice-cloning and -conversion models. If another approach similar to only ours is taken, more research into the psychoacoustics of timbral modification of voices should be conducted so that more effective and imperceptible modifications may be made to audio.</p>
+        </section>
+        <section>
+            <h2 id="conclusions">Conclusions</h2>
+            <p>Overall, our results were inconclusive and did not satisfy our criteria for success; however, they were suggestive of the potential for an approach that is based around our methods. We investigated the use of FFT-based alterations on voice-cloning reference audio and determined that our modifications produced varied behavior that did not support our hypothesis that the modifications would result in poorer performance from a voice cloning model. In one case, though, our modification produced a significant difference within the perception among our research participants which suggests that those FFT-based alterations could be used while maintaining the quality of the original audio.</p>
         </section>
     </main>
     <div class="space"></div>

@@ -5,70 +5,70 @@
 
     let age: number | null = $state(null);
 
-    // Comparison 1
-    // Bogus: OA v. OA, Tyler
-    let audio_1_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-1.wav';
-    let audio_1_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-2.wav';
+    // // Comparison 1
+    // // Bogus: OA v. OA, Tyler
+    // let audio_1_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-1.wav';
+    // let audio_1_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-2.wav';
 
-    // Comparison 2
-    // Real: OA v. AA, Hannah
-    let audio_2_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-4.wav';
-    let audio_2_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-2/audio-5.wav';
+    // // Comparison 2
+    // // Real: OA v. AA, Hannah
+    // let audio_2_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-4.wav';
+    // let audio_2_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-2/audio-5.wav';
 
-    // Comparison 3
-    // Real: OA v. OAO, Tyler
-    let audio_3_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-3.wav';
-    let audio_3_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-3/audio-3-1.wav';
+    // // Comparison 3
+    // // Real: OA v. OAO, Tyler
+    // let audio_3_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-3.wav';
+    // let audio_3_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-3/audio-3-1.wav';
 
-    // Comparison 4
-    // Bogus: OA v. OA, Tyler, Hannah
-    let audio_4_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-2.wav';
-    let audio_4_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-5.wav';
+    // // Comparison 4
+    // // Bogus: OA v. OA, Tyler, Hannah
+    // let audio_4_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-2.wav';
+    // let audio_4_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-5.wav';
 
-    // Comparison 5
-    // Real: OA v. OAO, Hannah
-    let audio_5_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-4.wav';
-    let audio_5_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-3/audio-4-5.wav';
+    // // Comparison 5
+    // // Real: OA v. OAO, Hannah
+    // let audio_5_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-4.wav';
+    // let audio_5_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-3/audio-4-5.wav';
 
-    // Comparison 6
-    // Bogus: OA v. OA, Hannah
-    let audio_6_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-5.wav';
-    let audio_6_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-4.wav';
+    // // Comparison 6
+    // // Bogus: OA v. OA, Hannah
+    // let audio_6_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-5.wav';
+    // let audio_6_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-4.wav';
 
-    // Comparison 7
-    // Real: AA v. AAO, Tyler
-    let audio_7_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-2/audio-2.wav';
-    let audio_7_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-4/audio-2-9.wav';
+    // // Comparison 7
+    // // Real: AA v. AAO, Tyler
+    // let audio_7_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-2/audio-2.wav';
+    // let audio_7_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-4/audio-2-9.wav';
 
-    // Comparison 8
-    // Real: OAO v. AAO, Hannah
-    let audio_8_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-3/audio-5-1.wav';
-    let audio_8_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-4/audio-5-7.wav';
+    // // Comparison 8
+    // // Real: OAO v. AAO, Hannah
+    // let audio_8_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-3/audio-5-1.wav';
+    // let audio_8_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-4/audio-5-7.wav';
 
-    // Comparison 9
-    // Bogus: OA v. OA, Hannah, Tyler
-    let audio_9_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-4.wav';
-    let audio_9_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-3.wav';
+    // // Comparison 9
+    // // Bogus: OA v. OA, Hannah, Tyler
+    // let audio_9_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-4.wav';
+    // let audio_9_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-3.wav';
 
-    // Comparison 10
-    // Real: OA v. AA, Tyler
-    let audio_10_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-1.wav';
-    let audio_10_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-2/audio-3.wav';
+    // // Comparison 10
+    // // Real: OA v. AA, Tyler
+    // let audio_10_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-1.wav';
+    // let audio_10_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-2/audio-3.wav';
 
-    // Comparison 11
-    // Bogus: OA v. OA, Tyler
-    let audio_11_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-2.wav';
-    let audio_11_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-1.wav';
+    // // Comparison 11
+    // // Bogus: OA v. OA, Tyler
+    // let audio_11_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-2.wav';
+    // let audio_11_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-1/audio-1.wav';
 
-    // Comparison 12
-    // Real: AA v. AAO, Hannah
-    let audio_12_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-2/audio-4.wav';
-    let audio_12_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-4/audio-4-6.wav';
+    // // Comparison 12
+    // // Real: AA v. AAO, Hannah
+    // let audio_12_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-2/audio-4.wav';
+    // let audio_12_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-4/audio-4-6.wav';
 
-    // Comparison 13
-    // Real: OAO v. AAO, Tyler
-    let audio_13_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-3/audio-1-5.wav';
-    let audio_13_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-4/audio-1-8.wav';
+    // // Comparison 13
+    // // Real: OAO v. AAO, Tyler
+    // let audio_13_1 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-3/audio-1-5.wav';
+    // let audio_13_2 = 'https://hatslhxtyerikghdqeyk.supabase.co/storage/v1/object/public/resources/audio/type-4/audio-1-8.wav';
 
     let audio_text = 'A rating of 1 indicates that the voices come from entirely different people. A rating of 5 indicates that the voices are from the same person under the same exact conditions. Ignore mispronunciations, odd cadences, and other speaking defects and focus on the speaker\'s identity.';
 
@@ -125,12 +125,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 1</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_1_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_1_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_1" id="comp_1" class="form-select" required>
@@ -144,12 +152,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 2</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_2_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_2_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_2" id="comp_2" class="form-select" required>
@@ -163,12 +179,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 3</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_3_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_3_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_3" id="comp_3" class="form-select" required>
@@ -182,12 +206,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 4</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_4_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_4_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_4" id="comp_4" class="form-select" required>
@@ -201,12 +233,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 5</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_5_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_5_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_5" id="comp_5" class="form-select" required>
@@ -220,12 +260,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 6</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_6_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_6_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_6" id="comp_6" class="form-select" required>
@@ -239,12 +287,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 7</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_7_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_7_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_7" id="comp_7" class="form-select" required>
@@ -258,12 +314,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 8</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_8_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_8_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_8" id="comp_8" class="form-select" required>
@@ -277,12 +341,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 9</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_9_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_9_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_9" id="comp_9" class="form-select" required>
@@ -296,12 +368,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 10</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_10_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_10_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_10" id="comp_10" class="form-select" required>
@@ -315,12 +395,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 11</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_11_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_11_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_11" id="comp_11" class="form-select" required>
@@ -334,12 +422,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 12</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_12_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_12_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_12" id="comp_12" class="form-select" required>
@@ -353,12 +449,20 @@
             </div>
             <div class="audio-group">
                 <h3>Audio Pair 13</h3>
-                <div class="audio-pair">
+                <!-- <div class="audio-pair">
                     <div class="audio-wrapper">
                         <Audio src={audio_13_1} title="Audio 1"></Audio>
                     </div>
                     <div class="audio-wrapper">
                         <Audio src={audio_13_2} title="Audio 2"></Audio>
+                    </div>
+                </div> -->
+                <div class="audio-pair">
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 1"></Audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <Audio src="" title="Audio 2"></Audio>
                     </div>
                 </div>
                 <select name="comp_13" id="comp_13" class="form-select" required>
